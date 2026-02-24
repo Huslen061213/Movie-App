@@ -12,7 +12,7 @@ export default function Moviecard({ rate, title, imageUrl, id }) {
   return (
     <div
       onClick={HandleMovieDetails}
-      className="h-[430px] w-[229px] flex flex-col overflow-hidden rounded-lg "
+      className="h-[430px] w-[229px] flex flex-col overflow-hidden rounded-lg cursor-pointer"
     >
       <div className="rounded-lg">
         <div
@@ -21,12 +21,12 @@ export default function Moviecard({ rate, title, imageUrl, id }) {
           }}
           className=" w-[229px] h-[340px] bg-cover bg-center "
         ></div>
-        <div className="flex flex-col p-[8px] bg-gray-100 w-[229px] h-[90px]">
+        <div className="flex flex-col p-[8px] bg-gray-100 dark:bg-gray-900 text-black dark:text-white w-[229px] h-[90px]">
           <div className="flex items-center">
             <Star />
             <div className="flex ">
               <p>{rate}</p>
-              <p className="text-gray-500">/10</p>
+              <p className="text-gray-500 dark:text-gray-400">/10</p>
             </div>
           </div>
           <p>{title}</p>

@@ -60,9 +60,9 @@ export default function MoreMovies(props) {
   }
 
   return (
-    <div className="w-[1440px] max-w-[1440px] flex flex-col  gap-8">
+    <div className="w-[1440px] max-w-[1440px] flex flex-col gap-8 text-black dark:text-white">
       <div className="flex justify-between px-[80px]">
-        <p className="text-[24px]">{type}</p>
+        <p className="text-[24px]">{type.replaceAll("_", " ").toUpperCase()}</p>
       </div>
       <div className="grid grid-cols-5 max-w-[1440px] w-[1440px] px-[80px] gap-[32px]">
         {movieData.map((movie) => (
@@ -75,7 +75,7 @@ export default function MoreMovies(props) {
           />
         ))}
       </div>
-      <div>
+      <div className="text-black dark:text-white">
         <Pagination>
           <PaginationContent>
             <PaginationItem>

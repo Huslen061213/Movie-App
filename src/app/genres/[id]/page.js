@@ -19,13 +19,11 @@ export default function Page() {
           Search filter
         </h1>
 
-        <div className="flex justify-between gap-8">
-          <div>
+        <div className="flex flex-col xl:flex-row gap-8">
+          <div className="w-full xl:w-auto xl:flex-shrink-0">
             <GenreDetails />
           </div>
-
-          
-          <div className="w-px bg-gray-200 dark:bg-gray-800 self-stretch"></div>
+          <div className="hidden xl:block w-px bg-gray-200 dark:bg-gray-800 self-stretch"></div>
 
           <div className="flex-1 min-w-0">
             <GenreMovies id={id} />

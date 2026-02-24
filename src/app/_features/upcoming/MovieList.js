@@ -26,10 +26,7 @@ export default function MovieList(props) {
       },
     });
 
-    
-
     const data = await response.json();
-    
 
     setTimeout(() => {
       setLoading(false);
@@ -49,11 +46,11 @@ export default function MovieList(props) {
   const HandleSeeMoreButton = () => {
     router.push(`/movies/${type}`);
   };
-  
+
   return (
     <div className="w-[1440px] max-w-[1440px] flex flex-col gap-8">
       <div className="flex justify-between px-[80px]">
-        <p className="text-[24px]">{type}</p>
+        <p className="text-[24px]">{type.replaceAll("_", " ").toUpperCase()}</p>
         <button
           className="flex items-center gap-2 text-[14px]"
           onClick={HandleSeeMoreButton}

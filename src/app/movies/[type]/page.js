@@ -10,9 +10,9 @@ export default function Page() {
   const { type } = useParams();
 
   return (
-    <div className="flex flex-col gap-y-[76px] items-center">
-      <div className="flex flex-col items-center gap-y-[52px]">
-        <Header />
+    <div>
+      <Header />
+      <div className="flex justify-center">
         <MoreMovies type={type} />
       </div>
       <Footer />

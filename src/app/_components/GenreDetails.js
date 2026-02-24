@@ -36,7 +36,7 @@ export default function GenreDetails() {
   };
 
   return (
-    <div className="flex flex-col p-[20px]  w-[577px]">
+    <div className="flex flex-col p-5 w-full xl:w-[387px] max-w-full">
       <div>
         <p className="text-[24px] font-semibold font-sans">Genres</p>
         <p className="text-[16px] font-sans">See lists of movies by genre</p>
@@ -44,13 +44,14 @@ export default function GenreDetails() {
       <div>
         <Separator className="my-4" />
       </div>
-      <div className="grid  grid-cols-3 gap-2 w-[537px]">
+      {/* <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full max-w-[537px]"> */}
+      <div className="flex flex-wrap gap-2 w-full max-w-[387px]">
         {genre.map((genre, index) => {
           return (
             <Badge
               key={index}
               className={
-                "bg-white border-gray-200 text-[#09090B] gap-2 flex felx-col text-[12px] font-sans font-semibold"
+                "bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-[#09090B] dark:text-white gap-2 flex felx-col text-[12px] font-sans font-semibold"
               }
               onClick={() => handleRouter(genre.id)}
             >

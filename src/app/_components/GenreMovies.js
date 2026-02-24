@@ -31,9 +31,9 @@ export default function GenreMovies(props) {
   };
   useEffect(() => {
     getData();
-  }, []);
+  }, [id]);
   return (
-    <div className="grid grid-cols-4  w-[806px] px-[60px] gap-[48px]">
+    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full px-0 xl:px-6 gap-[48px] justify-items-center">
       {movieData.map((movie) => (
         <GenreMovieCard
           key={movie.id}
